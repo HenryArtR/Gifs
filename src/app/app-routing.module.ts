@@ -1,7 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClipsComponent } from './gifs/pages/clips/clips.component';
+import { HomeComponent } from './gifs/pages/home/home.component';
+import { MemesComponent } from './gifs/pages/memes/memes.component';
+import { SearchComponent } from './gifs/pages/search/search.component';
+import { TrendingComponent } from './gifs/pages/trending/trending.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'home', component: HomeComponent},
+  {path: 'trending', component: TrendingComponent},
+  {path: 'memes', component: MemesComponent},
+  {path: 'search', component: SearchComponent},
+  {path: 'clips', component: ClipsComponent},
+  {path: '**', redirectTo: 'home'},
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

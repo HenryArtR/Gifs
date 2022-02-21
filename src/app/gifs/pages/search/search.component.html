@@ -1,0 +1,13 @@
+<div class="flex justify-content-end m-2">
+    <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search" #input (change)="buscar(input.value)"/>
+    </span>
+</div>
+
+<div class="grid flex justify-content-center m-5">
+    <div class="col-3 border-round  shadow-3 m-2" *ngFor="let item of gifs">
+        <p-image [src]="item.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
+        <h3 class="text-center">{{item.title| titlecase}}</h3>
+    </div>
+</div>

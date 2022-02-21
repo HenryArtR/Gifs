@@ -1,0 +1,6 @@
+<div class="grid flex justify-content-center m-5">
+    <div class="col-3 border-round  shadow-3 m-2" *ngFor="let item of memes">
+        <p-image [src]="item.url" alt="Image" imageClass="w-12 h-20rem"></p-image>
+        <h3 class="text-center">{{item.name| titlecase}}</h3>
+    </div>
+</div>
