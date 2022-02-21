@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'trending', component: TrendingComponent},
   {path: 'memes', component: MemesComponent},
-  {path: 'search', component: SearchComponent},
+  {path: 'search/:value', component: SearchComponent},
   {path: 'clips', component: ClipsComponent},
   {path: '**', redirectTo: 'home'},
 ];

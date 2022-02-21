@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { GifService } from 'src/app/services/gif.service';
+import { MemesService } from 'src/app/services/memes.service';
+import { Meme } from '../../interfaces/memes.interface';
+import { Datum, SearchGIF } from '../../interfaces/searchGif.interface';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +12,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  alien1!: Datum;
+  meme1!: Meme | undefined;
+
+  constructor(private _srvGifs: GifService, private _srvMeme: MemesService) { }
 
   ngOnInit(): void {
+    this._srvGifs.getGifById('26BRNKLUezD1NpsOc').subscribe(result => {
+      this.alien1 = result.data
+    })
+    this._srvMeme.obtenerMemes().subscribe(result => {
+      this.meme1 = result.data.memes.find(value => value.id == '27813981')
+      console.log(this.meme1)
+    })
   }
 
 }

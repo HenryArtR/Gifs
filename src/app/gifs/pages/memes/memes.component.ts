@@ -14,7 +14,10 @@ export class MemesComponent implements OnInit {
   constructor(private _srvMeme: MemesService) { }
 
   ngOnInit(): void {
-    this._srvMeme.obtenerMemes().subscribe(result => this.memes = result.data.memes)
+    this._srvMeme.obtenerMemes().subscribe(result => {
+      this.memes = result.data.memes
+    })
+    
   }
 
 }

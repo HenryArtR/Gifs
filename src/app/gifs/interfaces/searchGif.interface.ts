@@ -3,6 +3,10 @@ export interface SearchGIF {
     pagination: Pagination;
     meta:       Meta;
 }
+export interface SearchById {
+    data: Datum;
+    meta: Meta;
+}
 
 export interface Datum {
     type:                       Type;
