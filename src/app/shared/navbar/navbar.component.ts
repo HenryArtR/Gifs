@@ -5,6 +5,11 @@ import { MenuItem } from 'primeng/api';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styles: [
+    `
+      .rota-horizontal{
+          transform: scaleX(-1);
+      }
+    `
   ]
 })
 export class NavbarComponent implements OnInit {
@@ -17,9 +22,8 @@ export class NavbarComponent implements OnInit {
       this.items = [
           {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home'},
           {label: 'Trending Gifs', icon: 'pi pi-fw pi-calendar', routerLink: 'trending'},
-          {label: 'Search Gifs', icon: 'pi pi-fw pi-file', routerLink: 'search/random'},
-          {label: 'Memes', icon: 'pi pi-fw pi-pencil', routerLink: 'memes'},
-          {label: 'Clips', icon: 'pi pi-fw pi-cog', routerLink: 'clips'}
+          {label: 'Search Gifs', icon: 'pi pi-fw pi-file', routerLink: 'search/awesome'},
+          {label: 'Memes', icon: 'pi pi-fw pi-pencil', routerLink: 'memes'}
       ];
   }
 

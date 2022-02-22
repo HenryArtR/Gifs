@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClipsComponent } from './gifs/pages/clips/clips.component';
 import { HomeComponent } from './gifs/pages/home/home.component';
 import { MemesComponent } from './gifs/pages/memes/memes.component';
 import { SearchComponent } from './gifs/pages/search/search.component';
@@ -11,7 +10,6 @@ const routes: Routes = [
   {path: 'trending', component: TrendingComponent},
   {path: 'memes', component: MemesComponent},
   {path: 'search/:value', component: SearchComponent},
-  {path: 'clips', component: ClipsComponent},
   {path: '**', redirectTo: 'home'},
 ];
 

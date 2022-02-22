@@ -20,4 +20,11 @@ export class MemesComponent implements OnInit {
     
   }
 
+  buscar(valor: string){
+    let nuevoMeme = this.memes.filter(meme => {
+      meme.name.toLowerCase().search(valor.toLowerCase())
+    })
+    console.log(nuevoMeme)
+  }
+
 }

@@ -26,7 +26,7 @@ export class GifService {
   getGifById(value: string):Observable<SearchById>{
     return this.http.get<SearchById>(`${this.urlGifId}${value}${this.keyApi}`)
   }
-  getClips(value: string):Observable<any>{
+  getClips():Observable<any>{
     return this.http.get<any>(`${this.urlClip}${this.keyApi}`)
   }
 

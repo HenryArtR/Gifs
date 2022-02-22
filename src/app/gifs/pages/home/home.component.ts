@@ -13,17 +13,18 @@ import { Datum, SearchGIF } from '../../interfaces/searchGif.interface';
 export class HomeComponent implements OnInit {
 
   alien1!: Datum;
-  meme1!: Meme | undefined;
+  meme1!: Meme;
 
-  constructor(private _srvGifs: GifService, private _srvMeme: MemesService) { }
+  constructor(private _srvGifs: GifService, private _srvMeme: MemesService) {
+    
+  }
 
   ngOnInit(): void {
     this._srvGifs.getGifById('26BRNKLUezD1NpsOc').subscribe(result => {
       this.alien1 = result.data
     })
     this._srvMeme.obtenerMemes().subscribe(result => {
-      this.meme1 = result.data.memes.find(value => value.id == '27813981')
-      console.log(this.meme1)
+      this.meme1 = result.data.memes.find(value => value.id == '27813981')!
     })
   }
 
