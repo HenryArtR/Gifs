@@ -1,10 +1,13 @@
 
-<div class="grid flex justify-content-center m-5">
-    <div class="col-3 border-round  shadow-3 m-2" *ngFor="let item of memes">
-        <div class="flex justify-content-end">
-            <small>Id: {{item.id}}</small>
+<div class="container-fluid mt-4">
+    <div class="row mx-5">
+        <div class="col-sm-12 col-md-6 col-xl-3 my-2" *ngFor="let item of memes">
+            <div class="card">
+                <img [src]="item.url" class="imgGif" alt="gifImg">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{item.name}}</h5>
+                </div>
+            </div>
         </div>
-        <p-image [src]="item.url" alt="Image" imageClass="w-12 h-20rem"></p-image>
-        <h3 class="text-center">{{item.name| titlecase}}</h3>
     </div>
 </div>

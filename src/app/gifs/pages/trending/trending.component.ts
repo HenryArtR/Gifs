@@ -5,8 +5,7 @@ import { Datum } from '../../interfaces/searchGif.interface';
 @Component({
   selector: 'app-trending',
   templateUrl: './trending.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class TrendingComponent implements OnInit {
 

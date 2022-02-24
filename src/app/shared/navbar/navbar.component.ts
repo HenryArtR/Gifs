@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,22 +8,15 @@ import { MenuItem } from 'primeng/api';
       .rota-horizontal{
           transform: scaleX(-1);
       }
+      .headerImg{
+        width: 50px;
+      }
     `
   ]
 })
-export class NavbarComponent implements OnInit {
-
-  items: MenuItem[] = []
+export class NavbarComponent {
   
   constructor() { }
 
-  ngOnInit() {
-      this.items = [
-          {label: 'Home', icon: 'pi pi-fw pi-home', routerLink: 'home'},
-          {label: 'Trending Gifs', icon: 'pi pi-fw pi-calendar', routerLink: 'trending'},
-          {label: 'Search Gifs', icon: 'pi pi-fw pi-file', routerLink: 'search/awesome'},
-          {label: 'Memes', icon: 'pi pi-fw pi-pencil', routerLink: 'memes'}
-      ];
-  }
 
 }

@@ -1,11 +1,22 @@
-<div class="grid-container">
-    <div class="flex justify-content-center">
-        <p-image src="../assets/img/dogue.png" alt="Image" imageClass="w-12 h-10rem"></p-image>
-        <h1 class="flex align-items-center text-7xl">App Gifs</h1>
-        <p-image src="../assets/img/dogue.png" alt="Image" imageClass="w-12 h-10rem" class="rota-horizontal"></p-image>
-    </div>
 
-    <div class="flex justify-content-center">
-        <p-tabMenu [model]="items" [activeItem]="items[0]"></p-tabMenu>
-    </div>
+<div class="d-flex justify-content-center">
+    <img class="headerImg" src="../assets/img/dogue.png" alt="dogueImg">
+    <h1 class="d-flex align-items-center">AppGif</h1>
+    <img class="headerImg rota-horizontal" src="../assets/img/dogue.png" alt="dogueImg">
 </div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"   >
+            <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+            <div class="navbar-nav">
+                <button type="button" class="btn btn-outline-secondary m-1" routerLink="home" routerLinkActive="active">Home</button>
+                <button type="button" class="btn btn-outline-secondary m-1" routerLink="trending" routerLinkActive="active">Trending</button>
+                <button type="button" class="btn btn-outline-secondary m-1" routerLink="search/hi" routerLinkActive="active">Search Gif</button>
+                <button type="button" class="btn btn-outline-secondary m-1" routerLink="memes" routerLinkActive="active">Memes</button>
+            </div>
+        </div>
+    </div>
+  </nav>

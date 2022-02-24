@@ -1,16 +1,20 @@
-<div class="flex justify-content-end m-2">
-    <span class="p-input-icon-left">
-        <i class="pi pi-search"></i>
+<div class="d-flex justify-content-center m-3">
+    <span>
         <input type="text" pInputText placeholder="Search" #input (change)="buscar(input.value)"/>
     </span>
 </div>
 
-<div class="grid flex justify-content-center m-5">
-    <div class="col-3 border-round  shadow-3 m-2" *ngFor="let item of gifs">
-        <div class="flex justify-content-end">
-            <small>Id: {{item.id}}</small>
+<div class="container-fluid">
+    <div class="row mx-5">
+        <div class="col-sm-12 col-md-6 col-xl-3" *ngFor="let item of gifs">
+            <div class="card">
+                <img [src]="item.images.downsized_medium.url" class="imgGif" alt="gifImg">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
-        <p-image [src]="item.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
-        <h3 class="text-center">{{item.title| titlecase}}</h3>
     </div>
 </div>

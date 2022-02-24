@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._srvGifs.getGifById('26BRNKLUezD1NpsOc').subscribe(result => {
+    this._srvGifs.getGifById('YGIpIZjgxL68w').subscribe(result => {
       this.alien1 = result.data
     })
     this._srvMeme.obtenerMemes().subscribe(result => {

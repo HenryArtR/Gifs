@@ -4,7 +4,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { MemesComponent } from './pages/memes/memes.component';
 import { SearchComponent } from './pages/search/search.component';
 import { TrendingComponent } from './pages/trending/trending.component';
-import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 
 
 
@@ -23,7 +22,6 @@ import { PrimeNgModule } from '../prime-ng/prime-ng.module';
   ],
   imports: [
     CommonModule,
-    PrimeNgModule
   ]
 })
 export class GifsModule { }

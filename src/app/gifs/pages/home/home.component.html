@@ -1,28 +1,48 @@
-<div class="bg-primary p-4 m-1">
-    <h1 class="text-center">Bienvenido</h1>
+<div class="bg-indigo-600 py-3">
+    <h1 class="text-center text-white">Bienvenido</h1>
 </div>
-<div class="bg-primary-reverse">
-    <h2 class="text-center">Aqui puedes encontrar todo tipo de gifs de una forma rapida y sencilla</h2>
+<div>
+    <h2 class="text-center text-indigo-600 my-4">Aqui puedes encontrar todo tipo de gifs de una forma rapida y sencilla</h2>
 </div>
 
-<div class="grid flex justify-content-center m-5">
-    <div class="col-3 border-round  shadow-3 m-2">
+<div class="row justify-content-center mx-5">
+    <div class= "col-sm-6 col-md-3 col-xl-2">
+        <div class="card">
+            <img [src]="alien1.images.downsized_medium.url" alt="gifImg">
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3 col-xl-2">
+        <div class="card">
+            <img [src]="alien1.images.downsized_medium.url" alt="gifImg">
+        </div>
+    </div>
+</div>
+<!-- <div class="grid flex justify-content-center m-5">
+    <div class=" col-10 md:col-3 border-round  shadow-3 m-2">
+        <image [src]="alien1.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></image>
+    </div>
+    <div class="col-10 md:col-3 border-round  shadow-3 m-2">
         <p-image [src]="alien1.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
     </div>
-    <div class="col-3 border-round  shadow-3 m-2">
-        <p-image [src]="alien1.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
-    </div>
-    <div class="col-3 border-round  shadow-3 m-2">
+    <div class="col-10 md:col-3 border-round  shadow-3 m-2">
         <p-image [src]="alien1.images.downsized_medium.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
     </div>  
+</div> -->
+
+<div>
+    <h2 class="text-center text-indigo-600 my-4">Tambien si lo deseas puedes echar un vistazo a nuestra coleccion de Memes</h2>
 </div>
 
-<div class="bg-primary-reverse">
-    <h2 class="text-center">Tambien si lo deseas puedes echar un vistazo a nuestra coleccion de Memes</h2>
+<div class="row justify-content-center m-3">
+    <div class="col-sm-9 col-md-6 col-xl-5">
+        <div class="card">
+            <img [src]="meme1.url" alt="gifImg">
+        </div>
+    </div>
 </div>
 
-<div class="grid flex justify-content-center m-5">
-    <div class="col-3 border-round  shadow-3 m-2">
+<!-- <div class="grid flex justify-content-center m-5">
+    <div class="col-10 md:col-3 border-round  shadow-3 m-2">
         <p-image [src]="meme1!.url" alt="Image" imageClass="w-12 h-25rem"></p-image>
     </div> 
-</div>
+</div> -->
