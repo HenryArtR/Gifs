@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GifService } from 'src/app/services/gif.service';
 import { MemesService } from 'src/app/services/memes.service';
 import { Meme } from '../../interfaces/memes.interface';
-import { Datum, SearchGIF } from '../../interfaces/searchGif.interface';
+import { Datum } from '../../interfaces/searchGif.interface';
 
 @Component({
   selector: 'app-home',
